@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Suspense} from "react"
+import LandingPage from "./layouts/landingpage";
+import LoginPage from "./layouts/authentication/sign-in";
+import Signup from "./layouts/authentication/sign-up";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={null}>
+    <Routes>
+    <Route exact path="/" element={ <LandingPage/>} />
+    <Route exact path="/authentication-signin" element={ <LoginPage />} />
+    <Route exact path="/authentication-signup" element={ <Signup />} />
+  </Routes>
+  </Suspense>
   );
 }
 
