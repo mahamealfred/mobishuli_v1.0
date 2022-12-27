@@ -142,6 +142,7 @@ const SignupForm = ({ setAuth }) => {
             <LoadingButton
               fullWidth
               size="large"
+              style={{ borderRadius: 8 }}
               type="submit"
               variant="contained"
               loading={isSubmitting}

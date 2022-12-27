@@ -3,12 +3,10 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import logo from "../../assets/images/mobishulilogo.png"
-import CssBaseline from '@mui/material/CssBaseline';
-import { Button, Typography } from '@mui/material';
+import { Button} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 //import login from "../../assets/images/login.png";
 
@@ -34,10 +32,14 @@ function Index() {
   const handleLogin=()=>{
     navigate("/authentication-signin")
   }
+  const handleSignUp=()=>{
+    navigate("/authentication-signup")
+  }
+
 
   return (
-<Box sx={{ flexGrow: 1 }}>
-<AppBar position="sticky" sx={{backgroundColor:"white"}} elevation={1}>
+<Box sx={{ flexGrow: 0 }}>
+<AppBar  sx={{backgroundColor:"white"}} elevation={2}>
   <Toolbar>
     {/* <IconButton
       size="large"
@@ -58,18 +60,21 @@ function Index() {
             alt="Your logo."
             src={logo}
         />
-    <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
+    {/* <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
       News
-    </Typography>
-    <Box sx={{  flexGrow: 0}}>
+    </Typography> */}
+    <Box sx={{  flexGrow: 0,marginLeft:{xs:0,sm:20,md:70}}}>
     <Tooltip title="Login">
                <IconButton onClick={handleLogin} sx={{ p: 0 }}>
-               <Avatar sx={{ bgcolor:"#35A745", fontSize:"12px" }}>Login</Avatar>
+               <Avatar     size="small" sx={{ bgcolor:"#35A745", fontSize:"12px" }}>Login</Avatar>
                </IconButton>
-             </Tooltip> 
-             
+             </Tooltip>    
     </Box>
-           
+    <Box sx={{  flexGrow: 0,marginLeft:5,display:{xs:"none",sm:"flex"}}}>
+    <Tooltip title="Sign Up">
+    <Button   size="medium" onClick={handleSignUp} sx={{  bgcolor:"#35A745", boxShadow: 5,"&:hover": {backgroundColor: "#35A745", } }} variant="contained">SIGN UP</Button>
+    </Tooltip>    
+    </Box>
   </Toolbar>
 </AppBar>
 </Box>
