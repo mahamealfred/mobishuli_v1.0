@@ -1,4 +1,4 @@
-import { Button, Typography, useMediaQuery } from "@mui/material";
+import {  Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/system";
 import {
   BannerContainer,
@@ -8,7 +8,8 @@ import {
   BannerShopButton,
   BannerTitle,
 } from "../../styles/banner";
-import startimage from "../../assets/images/startimage.png";
+// import startimage from "../../assets/images/startimage.png";
+import startimage from "../../assets/images/mobishuli.png";
 import { useNavigate } from "react-router-dom";
 export default function Banner() {
   const navigate=useNavigate()
@@ -26,12 +27,9 @@ navigate("/authentication-signin")
         <BannerTitle variant="h4">
         Go Cashless
         </BannerTitle>
-
         <BannerDescription variant="subtitle">
-          Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo
-          tempor incididunt ut labore et dolore magna
+        Mobishuli is a payment system that helps parents, and students to pay school fees. 
         </BannerDescription>
-
         <BannerShopButton onClick={handleStart} color="primary">Get Started</BannerShopButton>
       </BannerContent>
     </BannerContainer>
