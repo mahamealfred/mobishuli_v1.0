@@ -38,8 +38,8 @@ function Index() {
 
 
   return (
-<Box sx={{ flexGrow: 0 }}>
-<AppBar  sx={{backgroundColor:"white"}} elevation={2}>
+<Box >
+<AppBar  sx={{backgroundColor:"white"}} position="fixed" elevation={2}>
   <Toolbar>
     {/* <IconButton
       size="large"

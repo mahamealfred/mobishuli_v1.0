@@ -17,7 +17,7 @@ export default function Banner() {
 navigate("/authentication-signin")
   }
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  // const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <BannerContainer >
@@ -28,7 +28,7 @@ navigate("/authentication-signin")
         Go Cashless
         </BannerTitle>
         <BannerDescription variant="subtitle">
-        Mobishuli is a payment system that helps parents, and students to pay school fees. 
+        Mobishuli is a payment system that helps parents and students to pay school fees. 
         </BannerDescription>
         <BannerShopButton onClick={handleStart} color="primary">Get Started</BannerShopButton>
       </BannerContent>
