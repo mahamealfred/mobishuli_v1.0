@@ -1,8 +1,7 @@
 import React,{lazy} from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Container, Typography, Link, Box, Divider } from "@mui/material";
+import { Container, Typography, Link, Box, Divider, Paper } from "@mui/material";
 import styled from "@emotion/styled";
-
 import SignupForm from "../components/SignupForm";
 import Logo from "../components/Logo";
 import { motion } from "framer-motion";
@@ -11,7 +10,7 @@ const Footer =lazy(() => import('../../../components/footer'))
 //////////////////////////////////
 const RootStyle = styled("div")({
   background: "rgb(249, 250, 251)",
-  height: "100vh",
+  height: "85vh",
   display: "grid",
   placeItems: "center",
 });
@@ -52,6 +51,9 @@ const Signup = ({ setAuth }) => {
     <>
     <AppBar/>
     <RootStyle>
+    <Paper elevation={2}
+     style={{ borderRadius: 15 }}
+    >
       <Container maxWidth="sm">
         <ContentStyle>
           <HeadingStyle component={motion.div} {...fadeInUp}>
@@ -107,6 +109,7 @@ const Signup = ({ setAuth }) => {
           </Typography>
         </ContentStyle>
       </Container>
+      </Paper>
     </RootStyle>
     <Footer />
     </>

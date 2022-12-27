@@ -39,7 +39,7 @@ function Index() {
 
   return (
 <Box >
-<AppBar  sx={{backgroundColor:"white"}} position="fixed" elevation={2}>
+<AppBar  sx={{backgroundColor:"white"}} position="sticky" elevation={1}>
   <Toolbar>
     {/* <IconButton
       size="large"

@@ -5,11 +5,12 @@ import styled from "@emotion/styled";
 import LoginForm from "../components/LoginForm";
 // import SocialAuth from "../components/SocialAuth";
 import { motion } from "framer-motion";
+import { Colors } from "../../../styles/theme";
 const AppBar =lazy(() => import('../../../components/appbar'))
 const Footer =lazy(() => import('../../../components/footer'))
 const RootStyle = styled("div")({
-  background: "rgb(249, 250, 251)",
-  height: "100vh",
+  background:"rgb(249, 250, 251)",
+  height: "85vh",
   display: "grid",
   placeItems: "center",
 });
@@ -50,7 +51,9 @@ const Login = ({ setAuth }) => {
     <>
     <AppBar/>
     <RootStyle> 
-    <Paper elevation={8} />
+    <Paper elevation={2}
+     style={{ borderRadius: 15 }}
+    >
     <Container maxWidth="sm">
         <ContentStyle>
           <HeadingStyle component={motion.div} {...fadeInUp}>
@@ -87,7 +90,7 @@ const Login = ({ setAuth }) => {
           </Typography>
         </ContentStyle>
       </Container>
-<Paper />
+</Paper >
      
     </RootStyle>
     <Footer/>

@@ -48,7 +48,7 @@ const LoginForm = ({ setAuth }) => {
     },
     validationSchema: LoginSchema,
     onSubmit: () => {
-      console.log("submitting...");
+      navigate("/dashboard")
       setTimeout(() => {
         console.log("submited!!");
         setAuth(true);
@@ -156,6 +156,7 @@ const LoginForm = ({ setAuth }) => {
               style={{ borderRadius: 8 }}
               variant="contained"
               loading={isSubmitting}
+           
             >
               {isSubmitting ? "loading..." : "Login"}
             </LoadingButton>

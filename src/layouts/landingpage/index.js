@@ -15,7 +15,7 @@ const Index = () => {
         disableGutters
         maxWidth="xl"
         sx={{
-          background: "#fff",
+          background: "rgb(249, 250, 251)",
         }}
       >
 

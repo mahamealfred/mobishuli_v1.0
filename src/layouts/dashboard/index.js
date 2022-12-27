@@ -52,7 +52,7 @@ const Index = (props) => {
                                             justifyCenter: "center"
                                         }}
                                     >
-                                        <p>Service</p>
+                                        <p>Picture</p>
                                     </Box>
                                 </CardContent>
                                 <Divider />
@@ -81,7 +81,7 @@ const Index = (props) => {
                                             flexDirection: 'column'
                                         }}
                                     >
-                                        <p>Wigite</p>
+                                        <p>Details</p>
                                     </Box>
                                 </CardContent>
                                 <Divider />
