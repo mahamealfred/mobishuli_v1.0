@@ -36,7 +36,7 @@ const Index = () => {
     >
 <ButtonGroup variant="text" style={{color:"black"}}  aria-label="text button group">
         <Button style={{textTransform: 'none',color:"black"}} onClick={handleHomePage} >Home</Button>
-        <Button style={{textTransform: 'none',color:"black"}}>Services</Button>
+        {/* <Button style={{textTransform: 'none',color:"black"}}>Services</Button> */}
         <Button style={{textTransform: 'none',color:"black"}}>MarketPlace</Button>
         <Button style={{textTransform: 'none',color:"black"}}>MobiTv</Button>
         <Button style={{textTransform: 'none',color:"black"}}>MoreApp</Button>

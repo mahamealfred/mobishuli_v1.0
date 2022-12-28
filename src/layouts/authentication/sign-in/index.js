@@ -91,7 +91,6 @@ const Login = ({ setAuth }) => {
         </ContentStyle>
       </Container>
 </Paper >
-     
     </RootStyle>
     <Footer/>
     </>
