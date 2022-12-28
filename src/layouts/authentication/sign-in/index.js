@@ -84,7 +84,7 @@ const Login = ({ setAuth }) => {
             sx={{ mt: 3 }}
           >
             Don’t have an account?{" "}
-            <Link variant="subtitle2" component={RouterLink} to="/authentication-signup">
+            <Link variant="subtitle2" component={RouterLink} to="/signup-selection">
               Sign up
             </Link>
           </Typography>

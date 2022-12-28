@@ -10,7 +10,7 @@ const Footer =lazy(() => import('../../../components/footer'))
 //////////////////////////////////
 const RootStyle = styled("div")({
   background: "rgb(249, 250, 251)",
-  height: "85vh",
+  height: "100vh",
   display: "grid",
   placeItems: "center",
 });

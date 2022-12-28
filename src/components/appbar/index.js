@@ -33,7 +33,7 @@ function Index() {
     navigate("/authentication-signin")
   }
   const handleSignUp=()=>{
-    navigate("/authentication-signup")
+    navigate("/signup-selection")
   }
 
 
