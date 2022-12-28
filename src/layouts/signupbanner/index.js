@@ -21,7 +21,10 @@ export default function Banner() {
 navigate("/authentication-signin")
   }
   const handleParentSignup=()=>{
-    navigate("/authentication-signup")
+    navigate("/authentication-parent-signup")
+  }
+  const handleStudentSignup=()=>{
+    navigate("/authentication-student-signup")
   }
   const theme = useTheme();
   // const matches = useMediaQuery(theme.breakpoints.down("md"));
@@ -47,7 +50,7 @@ navigate("/authentication-signin")
               justifyContent="center"
             >
               <Button variant="contained" onClick={handleParentSignup}>Parent</Button>
-              <Button variant="outlined">Student</Button>
+              <Button variant="outlined" onClick={handleStudentSignup}>Student</Button>
             </Stack>
       </BannerContent>
     </BannerContainer>

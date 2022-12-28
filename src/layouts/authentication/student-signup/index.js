@@ -1,8 +1,8 @@
 import React,{lazy} from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Container, Typography, Link, Box, Divider, Paper, CssBaseline } from "@mui/material";
+import { Container, Typography, Link, Box, Divider, Paper } from "@mui/material";
 import styled from "@emotion/styled";
-import SignupForm from "../components/SignupForm";
+import StudentSignupForm from "../components/StudentSignupForm";
 import Logo from "../components/Logo";
 import { motion } from "framer-motion";
 const AppBar =lazy(() => import('../../../components/appbar'))
@@ -46,11 +46,10 @@ const fadeInUp = {
   },
 };
 
-const Signup = ({ setAuth }) => {
+const StudentSignup = ({ setAuth }) => {
   return (
-    <React.Fragment>
+    <>
     <AppBar/>
-    <CssBaseline/>
     <RootStyle>
     <Paper elevation={2}
      style={{ borderRadius: 15 }}
@@ -76,7 +75,7 @@ const Signup = ({ setAuth }) => {
             </Typography>
           </Divider> */}
 
-          <SignupForm setAuth={setAuth} />
+          <StudentSignupForm setAuth={setAuth} />
 
           {/* <Typography
             component={motion.p}
@@ -113,9 +112,9 @@ const Signup = ({ setAuth }) => {
       </Paper>
     </RootStyle>
     <Footer />
-    </React.Fragment>
+    </>
   
   );
 };
 
-export default Signup;
+export default StudentSignup;

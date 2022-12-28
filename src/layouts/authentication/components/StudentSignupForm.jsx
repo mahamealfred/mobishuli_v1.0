@@ -52,7 +52,7 @@ function MyFormControlLabel(props) {
 
   return <StyledFormControlLabel checked={checked} {...props} />;
 }
-const SignupForm = ({ setAuth }) => {
+const StudentSignupForm = ({ setAuth }) => {
   const navigate = useNavigate();
   const [value, setValue] = useState(dayjs('2022-04-07'));
   const [showPassword, setShowPassword] = useState(false);
@@ -137,11 +137,12 @@ const SignupForm = ({ setAuth }) => {
             <TextField
               fullWidth
               size="small"
-              label="Identification Number"
+              label="School code"
               {...getFieldProps("lastName")}
               error={Boolean(touched.lastName && errors.lastName)}
               helperText={touched.lastName && errors.lastName}
             />
+         
           </Stack>
           <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
           <Stack
@@ -187,10 +188,38 @@ const SignupForm = ({ setAuth }) => {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group" defaultValue="first">
 
-      <MyFormControlLabel value="first" label="Married"   labelPlacement="end" control={<Radio />} />
-      <MyFormControlLabel value="second" label="Widow"   labelPlacement="end" control={<Radio />} />
-      <MyFormControlLabel value="third" label="Divorced"   labelPlacement="end" control={<Radio />} />
+      <MyFormControlLabel value="first" label="Unmarried"   labelPlacement="end" control={<Radio />} />
+      <MyFormControlLabel value="second" label="Married"   labelPlacement="end" control={<Radio />} />
+      <MyFormControlLabel value="third" label="Other"   labelPlacement="end" control={<Radio />} />
     </RadioGroup>
+          </Stack>
+          <Stack
+           component={motion.div}
+           initial={{ opacity: 0, y: 60 }}
+           animate={animate}
+           direction={{ xs: "column", sm: "row" }}
+           spacing={2}
+          >
+ <TextField
+              fullWidth
+              size="small"
+              autoComplete="username"
+              type="email"
+              label="Student Reg number"
+              {...getFieldProps("email")}
+              error={Boolean(touched.email && errors.email)}
+              helperText={touched.email && errors.email}
+            />
+                <TextField
+              fullWidth
+              size="small"
+              autoComplete="username"
+              type="email"
+              label="Student iD"
+              {...getFieldProps("email")}
+              error={Boolean(touched.email && errors.email)}
+              helperText={touched.email && errors.email}
+            />
           </Stack>
           <Stack
             spacing={3}
@@ -198,16 +227,28 @@ const SignupForm = ({ setAuth }) => {
             initial={{ opacity: 0, y: 40 }}
             animate={animate}
           >
-                <TextField
+            
+             <TextField
               fullWidth
               size="small"
               autoComplete="username"
               type="email"
-              label="Spouse Name"
+              label="Parent name"
               {...getFieldProps("email")}
               error={Boolean(touched.email && errors.email)}
               helperText={touched.email && errors.email}
             />
+             <TextField
+              fullWidth
+              size="small"
+              autoComplete="username"
+              type="email"
+              label="Parent ID"
+              {...getFieldProps("email")}
+              error={Boolean(touched.email && errors.email)}
+              helperText={touched.email && errors.email}
+            />
+       
                 <TextField
               fullWidth
               size="small"
@@ -328,4 +369,4 @@ const SignupForm = ({ setAuth }) => {
   );
 };
 
-export default SignupForm;
+export default StudentSignupForm;
