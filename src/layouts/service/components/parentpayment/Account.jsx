@@ -136,6 +136,7 @@ const Account=({
             // onChange={(e)=>setFormData({...formData,password:e.target.value})}
             // helperText={passwordError? passwordError : ""}
             // error={passwordError}
+              // error={passwordError}
             type="password"
             fullWidth
             autoComplete="cc-number"
