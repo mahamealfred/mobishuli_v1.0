@@ -59,7 +59,7 @@ const StudentSignup = ({ setAuth }) => {
           <HeadingStyle component={motion.div} {...fadeInUp}>
             {/* <Logo /> */}
             <Typography sx={{ color: "text.secondary", mb: 5 }}>
-              Enter your details below.
+              Enter your details below
               <Divider sx={{ my: 3 }} component={motion.div} {...fadeInUp}/>
             </Typography>
        
