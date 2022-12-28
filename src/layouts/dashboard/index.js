@@ -5,15 +5,15 @@ import {
     Button,
     Card,
     CardContent,
-
     Divider,
     Grid,
-
     Container,
     CardActions,
+    CardMedia,
 
 } from '@mui/material';
-
+import cardImage from "../../assets/images/mobishuli.png"
+import ParentPayment from '../service/pages/ParentPayment';
 const AppBar = lazy(() => import('../../components/appbar'))
 const Footer = lazy(() => import('../../components/footer'))
 const Index = (props) => {
@@ -26,15 +26,14 @@ const Index = (props) => {
                 component="main"
                 sx={{
                     flexGrow: 1,
-                    py: 4,
+                    py: 6,
                     width: "100vw"
-
                 }}
             >
                 <Container maxWidth="lg">
                     <Grid
                         container
-                        spacing={2}
+                        spacing={4}
                     >
                         <Grid
                             item
@@ -52,18 +51,24 @@ const Index = (props) => {
                                             justifyCenter: "center"
                                         }}
                                     >
-                                        <p>Picture</p>
+                                           <CardMedia
+                                      component="img"
+                                      height={{xs:"200",sm:"365"}}
+                                      sx={{objectFit:"contain"}}
+                                   image={cardImage}
+                                     alt="Paella dish"
+                                             />
                                     </Box>
                                 </CardContent>
-                                <Divider />
-                                <CardActions>
+                                {/* <Divider /> */}
+                                {/* <CardActions>
                                     <Button
                                         color="primary"
                                         fullWidth
                                         variant="text"
                                     >
                                     </Button>
-                                </CardActions>
+                                </CardActions> */}
                             </Card>
                         </Grid>
                         <Grid
@@ -81,18 +86,18 @@ const Index = (props) => {
                                             flexDirection: 'column'
                                         }}
                                     >
-                                        <p>Details</p>
+                                     <ParentPayment/>
                                     </Box>
                                 </CardContent>
-                                <Divider />
-                                <CardActions>
+                                {/* <Divider /> */}
+                                {/* <CardActions>
                                     <Button
                                         color="primary"
                                         fullWidth
                                         variant="text"
                                     >
                                     </Button>
-                                </CardActions>
+                                </CardActions> */}
                             </Card>
                         </Grid>
                     </Grid>
